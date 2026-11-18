@@ -70,5 +70,14 @@ namespace TestProject1
             Assert.Equal(0m, objednavka.VypocitejDopravu());
             Assert.Equal(4500m, objednavka.VypocitejCelkem());
         }
+        [Fact]
+        public void TestT8()
+        {
+            var objednavka = new Objednavka(5000m, 1);
+
+            Assert.Equal(500m, objednavka.VypocitejSlevu());
+            Assert.Equal(199m, objednavka.VypocitejDopravu());
+            Assert.Equal(4699m, objednavka.VypocitejCelkem());
+        }
     }
 }
